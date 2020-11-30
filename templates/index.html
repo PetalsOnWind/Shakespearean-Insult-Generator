@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+h3 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+img{
+  height: 10%;
+  width: 10%;
+  opacity: 0.8;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#btn {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+</style>
+<title>Shakespearean Insult Generator</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+
+$('#form').on('submit', function(){  
+				$.ajax({ 
+					url: '/hello_insult', 
+					type: 'POST', 
+					data: {}
+					
+			});
+</script>
+</head>
+<body>
+
+<h1>Shakespearean Insult Generator</h1>
+<br>
+<img src="shakespeare.jpg" alt="Shakespeare" class="center">
+<h3> {{ insult }} </h3>
+<br>
+<form id="form" action="/" method="get">
+  <input type="submit" id="btn" value="Another insult!">
+</form>
+<br>
+<br>
+<br>
+<hr size="2" width="90%" color="black">
+<br>
+<br>
+<br>
+<a href="http://www.pangloss.com/seidel/shake_rule.html">Insult Source</a>
+
+</body>
+</html>
